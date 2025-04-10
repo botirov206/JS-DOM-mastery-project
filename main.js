@@ -112,3 +112,42 @@ function updateTable() {
 form.addEventListener("submit", () => {
     updateTable();
 });
+
+// Modify your handleSubmit function:
+function handleSbmit(event) {
+    event.preventDefault();
+    const inputs = document.querySelectorAll("input");
+
+    inputs.forEach((input) => {
+        obj[input.name] = input.value;
+    });
+
+    users.push({ ...obj });
+    // Save to localStorage
+    localStorage.setItem('userData', JSON.stringify(users));
+    console.log(users);
+}
+
+// Add this function to load data from localStorage and populate the table
+function loadSavedData() {
+    const savedData = localStorage.getItem('userData');
+    if (savedData) {
+        const parsedData = JSON.parse(savedData);
+        users.push(...parsedData); // Update users array with saved data
+        
+        // Populate table with saved data
+        parsedData.forEach(userData => {
+            const row = document.createElement("tr");
+            labels.forEach(label => {
+                const td = document.createElement("td");
+                td.textContent = userData[label.toLowerCase()];
+                row.appendChild(td);
+            });
+            tableBody.appendChild(row);
+        });
+        table.appendChild(tableBody);
+    }
+}
+
+// Call loadSavedData when the page loads
+document.addEventListener('DOMContentLoaded', loadSavedData);
