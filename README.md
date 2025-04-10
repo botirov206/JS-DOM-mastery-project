@@ -54,8 +54,8 @@ This project helped improve understanding of:
 To get started with this project, clone the repository using:
 
 ```bash
-git clone https://github.com/yourusername/dynamic-form-js.git
-cd dynamic-form-js
+git clone https://github.com/botirov206/JS-DOM-mastery-project.git
+cd JS-DOM-mastery-project
 ```
 
 Then simply open the `index.html` file in your browser to see the application in action.
