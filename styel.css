@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #907c7c;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+table {
+    max-width: 600px;
+    margin: 20px auto;
+    width: 100%;
+    border-collapse: collapse; /* Ensures proper spacing */
+    cursor: pointer;
+    text-align: center; /* Centers the text in table cells */
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 33.33%; /* Ensures equal width for all columns */
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+td {
+    background-color: #f2f2f2;
+}
+tfoot td {
+    text-align: center;
+}
+tfoot td[colspan="4"] {
+    background-color: #4CAF50;
+    color: white;
+}
